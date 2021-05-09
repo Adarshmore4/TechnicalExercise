@@ -72,7 +72,6 @@ public class LoginTestSteps {
 	@After
 	public void captureScreenshot(Scenario scenario) throws Throwable{
 			if (scenario.isFailed()) {
-		     
 		      final byte[] screenshot = ((TakesScreenshot) LoginTestSteps.driver).getScreenshotAs(OutputType.BYTES);
 		      scenario.embed(screenshot, "image/png"); 
 		      LoginTestSteps.driver.quit();

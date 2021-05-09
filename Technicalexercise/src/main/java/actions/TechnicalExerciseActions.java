@@ -36,7 +36,6 @@ public class TechnicalExerciseActions {
 		for(WebElement category : categories)
 		{	
 				if(category.getText().equalsIgnoreCase(categoryName)) {
-				System.out.println(category.getText());
 				isPresent = true;
 				break;
 			}
@@ -45,7 +44,7 @@ public class TechnicalExerciseActions {
 	}
 	
 	//function to delete selected category
-		public static void deleteCategory(WebDriver driver, String categoryName) {		
+		public static void deleteCategory(WebDriver driver, String categoryName) throws Throwable {		
 			WebElement deletecategoryElement = BackEndPageElements.getDeleteCategoryButtonElement(driver, categoryName);
 			deletecategoryElement.click();
 			driver.switchTo().alert().accept();

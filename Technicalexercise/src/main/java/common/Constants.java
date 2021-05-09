@@ -3,7 +3,7 @@ package common;
 public class Constants {
 
 	//Browser can be updated to "CHROME", "EDGE", "FIREFOX"
-	public static String BROWSER = "CHROME";
+	public static String BROWSER = "EDGE";
 	
 	//URL to the application under test
 	public static String URL = "https://mysite.staging.wpninc.com/en";

@@ -16,17 +16,11 @@ import cucumber.api.junit.Cucumber;
 		plugin = { "pretty", "html:target/cucumber-reports" }
 )
 
-public class TechnicalExerciseTest {
-	
-	
-	
+	public class TechnicalExerciseTest {	
 	public static void main(String[] args) throws Exception {		
 		 String[] options = {"--glue", "stepDefinition",
          "Feature\\technicalexercisescenario.feature"};
 		  byte exitcode = Main.run(options, Thread.currentThread().getContextClassLoader());
 		  System.out.println("exitcode = " + exitcode);
-		
-			
 	}
-	
 }

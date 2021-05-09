@@ -1,6 +1,7 @@
 package actions;
 
 import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import common.Constants;
@@ -43,13 +44,13 @@ public class TechnicalExerciseActions {
 		return isPresent;
 	}
 	
-	//function to perform logout from home screen
-	public static void logOut(WebDriver driver) {		
-		WebElement profileElement = HomePageElements.getProfileDropdownElement(driver, Constants.WAIT1);
-		profileElement.click();
-		WebElement logOutElement = HomePageElements.getLogoutElement(driver, Constants.WAIT1);
-		logOutElement.click();
-		driver.close();
-	}
+	//function to delete selected category
+		public static void deleteCategory(WebDriver driver, String categoryName) {		
+			WebElement deletecategoryElement = BackEndPageElements.getDeleteCategoryButtonElement(driver, categoryName);
+			deletecategoryElement.click();
+			driver.switchTo().alert().accept();
+			WebElement categoryElement = BackEndPageElements.getCategoriesElement(driver, Constants.WAIT1);
+			categoryElement.click();
+		}
 	
 }

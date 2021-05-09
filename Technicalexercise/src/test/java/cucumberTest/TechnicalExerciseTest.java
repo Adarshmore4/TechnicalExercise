@@ -20,13 +20,11 @@ public class TechnicalExerciseTest {
 	
 	
 	
-	public static void main(String[] args) throws Exception {
-		
-		
+	public static void main(String[] args) throws Exception {		
 		 String[] options = {"--glue", "stepDefinition",
          "Feature\\technicalexercisescenario.feature"};
-		byte exitcode = Main.run(options, Thread.currentThread().getContextClassLoader());
-		 System.out.println("exitcode = " + exitcode);
+		  byte exitcode = Main.run(options, Thread.currentThread().getContextClassLoader());
+		  System.out.println("exitcode = " + exitcode);
 		
 			
 	}

@@ -42,11 +42,7 @@ public class TechicalExerciseTestSteps {
 
 	@Given("user deletes the category {string}")
 	public void user_deletes_the_category(String categoryName)  throws Throwable{		
-		WebElement deletecategoryElement = BackEndPageElements.getDeleteCategoryButtonElement(LoginTestSteps.driver, categoryName);
-		deletecategoryElement.click();
-		LoginTestSteps.driver.switchTo().alert().accept();
-		WebElement categoryElement = BackEndPageElements.getCategoriesElement(LoginTestSteps.driver, Constants.WAIT1);
-		categoryElement.click();
+		TechnicalExerciseActions.deleteCategory(LoginTestSteps.driver, categoryName);
 	}
 
 	@Then("category should get deleted successfully {string}")
@@ -60,10 +56,5 @@ public class TechicalExerciseTestSteps {
 		WebElement gotoMySiteButton = BackEndPageElements.getGotoMySiteButtonElement(LoginTestSteps.driver);
 		gotoMySiteButton.click();
 	 }
-
-	@And("logged out of the application")
-	public void logged_out_of_the_appliacation() throws Throwable{		
-		TechnicalExerciseActions.logOut(LoginTestSteps.driver);
-	}
 
 }

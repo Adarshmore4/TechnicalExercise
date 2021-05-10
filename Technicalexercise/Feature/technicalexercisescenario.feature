@@ -13,4 +13,7 @@ Feature: Technical Exercise
   	Then User should get navigated to welcome page successfully
   	And logged out of the application
   	
-  
+  	
+    
+
+	

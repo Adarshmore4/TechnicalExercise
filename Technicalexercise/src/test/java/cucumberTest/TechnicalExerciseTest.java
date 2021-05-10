@@ -6,8 +6,9 @@ import cucumber.api.cli.Main;
 import cucumber.api.junit.Cucumber;
 
 
+// Running using JUnit
 @RunWith(Cucumber.class)
-@CucumberOptions
+@cucumber.api.CucumberOptions
 (
 		monochrome = true,
 		tags = ("~@Test"),
@@ -16,6 +17,11 @@ import cucumber.api.junit.Cucumber;
 		plugin = { "pretty", "html:target/cucumber-reports" }
 )
 
+public class TechnicalExerciseTest {
+}
+
+
+/* <-----Uncomment this class to run as Java----->
 	public class TechnicalExerciseTest {	
 	public static void main(String[] args) throws Exception {		
 		 String[] options = {"--glue", "stepDefinition",
@@ -23,4 +29,10 @@ import cucumber.api.junit.Cucumber;
 		  byte exitcode = Main.run(options, Thread.currentThread().getContextClassLoader());
 		  System.out.println("exitcode = " + exitcode);
 	}
-}
+} */
+
+/*	<-----Uncomment this class to run as TestNG----->
+ 	@Test
+	public class TechnicalExerciseTest extends cucumber.api.testng.AbstractTestNGCucumberTests {
+	
+} */
